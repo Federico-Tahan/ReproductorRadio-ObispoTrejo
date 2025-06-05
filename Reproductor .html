@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>89.3 Radio Municipal</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="description" content="89.3 Radio Municipal - Obispo Trejo">
+    <meta name="theme-color" content="#0c0c0c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogIlJhZGlvIExpdmUgLSBNw7pzaWNhIDI0LzciLAogICJzaG9ydF9uYW1lIjogIlJhZGlvIExpdmUiLAogICJkZXNjcmlwdGlvbiI6ICJFc2N1Y2hhIG3DunNpY2EgZW4gdml2byBsYXMgMjQgaG9yYXMiLAogICJzdGFydF91cmwiOiAiLyIsCiAgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsCiAgInRoZW1lX2NvbG9yIjogIiMwYzBjMGMiLAogICJiYWNrZ3JvdW5kX2NvbG9yIjogIiMwYzBjMGMiLAogICJvcmllbnRhdGlvbiI6ICJwb3J0cmFpdCIsCiAgImNhdGVnb3JpZXMiOiBbIm11c2ljIiwgImVudGVydGFpbm1lbnQiXSwKICAiaWNvbnMiOiBbCiAgICB7CiAgICAgICJzcmMiOiAiZGF0YTppbWFnZS9zdmcreG1sO2Jhc2U2NCxQSE4yWnlCM2FXUjBhRDBpTVRJNElpQm9aV2xuYUhROUlqRXlPQ0lpSUhabGNuTnBiMjQ5SWpFdU1TSWdlRzFzYm5NOUltaDBkSEE2THk5M2QzY3Vkek11YjNKbkx6SXdNREF2YzNabklpQjRiV3h1Y3pwNGJHbHVhejFpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TVRrNU9TOWJiR2x1YTNJK1BHUmxabk0rUEd4cGJtVmhja2R5WVdScFpXNTBJR2xrUFNKdmNtZGhiakF4SWlCNE1UMGlNQ1VpSUhreFBTSXdKU0lpSUhneFBTSXhNREFsSWlCNU1UMGlNQ1VpUGp4emRHOXdJSE4wYjNBdFkyOXNiM0k5SW1abUF6QTFNRUVpSUM4K1BITjBiM0FnYjJabWMyVjBQU0l4TURBbElpQnpkRzl3TFdOdmJHOXlQU0puWW1Nd09ERTNPU0VpTHo0OEwyeHBibVZoY2tkeVlXUnBaVzUwUGp3dlpHVm1jejQ4Wm1sc2RHVnlJR2xrUFNKbUl6QWlQanh3Y0dGMGFDQmtQU0p0VFRVMkxqVTJMamczSUV0ek1qQXNMamczSUVFeE56Z3VNekV6SWpZdU16a3lJREUzT0M0ek1UTWdOeTR3TVRRZ01UYzRMak14TXlBeE5TNHpOREVnTVRjNExqTXhNeUF5TkM0Mk5qRWdNVGM0TGpNZTJRaURFM09DNHpNVE1nTXpNdU9UWTJJREU0T0M0Mk16UWdOekV1T0RNMklFdDRNamt1TURRMElFdGhUalkxSWw5emNqTXlJSFprUFNJd0ppSStQQzl3Y0dGMGFEdzhMMlpwYkhSbGNqNDhaMU1nYVdROUltbGpiMjRpUENCZ2FHSnBNREF4TURFZ2FEaDBkSEE2THk5amIyUnBabWx2Ym5NdVkyOXRMblZ1YVdOdlpHVXViM0puTHpVME1ETXhPRHhsYzJ4cWFYVXJJR0ZqYjI1TGFYTXhQU2xuWW1SMk5rNU9TVFkyVWtSbE1rWnFWSE00VjJGMFJ6VjNNMFI0ZVhKMlVGRlBTWGxvU25wbU1VRkhUVkpIYVdSMU16Z3lObGRoWW1kNVJGbEZXbE5DU0ZOd2NXSnRhVVZCUlhad2VHaE5iRTVUZFU0dU1qSkNjVzkzYm1kbUltUnBaMjl2YzJGNlJGTWlQanh6ZEdsbGJHVStMbWx5UjIxcGRIZGhZM2hRVUh0d1VXRXVWbDVLTkhGb1dVNWhOMGhHY1RFMmFGZGFPVVJzWlZKcU56a3ljUQ==IiwKICAgICAgInR5cGUiOiAiaW1hZ2Uvc3ZnK3htbCIsCiAgICAgICJzaXplcyI6ICIxMjh4MTI4IgogICAgfQogIF0KfQ==">
+    
+    <!-- iOS Icons -->
+    <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgdmlld0JveD0iMCAwIDEyOCAxMjgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJvcmdhbjAxIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIwJSI+PHN0b3Agc3RvcC1jb2xvcj0iI2ZmMDA1MCIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZjQwODEiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PGZpbHRlciBpZD0iZiI+PHBwYXRoIGQ9Im1UNTYuNTYuODcgS3MyMCwuODcgQTE3OC4zMTMgNi4zOTIgMTc4LjMxMyA3LjAxNCAxNzguMzEzIDE1LjM0MSBUMTY4LjMxMyAyNC42NjEgMTc4LjMxMyAzMy45NjYgMTg4LjYzNCA3MS44MzYgSzI5LjA0NCBLYTUiLz48L2ZpbHRlcj48cGF0aCBkPSJNNjQgNEMzMCA0IDQgMzAgNCA2NEMzMiA5OCA5OCA5OCA2NCA2NEM5OCA2NCA5OCA2NCA2NCA2NEMzMiA0IDY0IDRMMTY0IDQ0WjU4IDQ4WkE2NHMzMiIDUyIDY0WjY0Ij48L3BhdGg+PC9zdmc+">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9Im9yZ2FuMDEiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjAlIj48c3RvcCBzdG9wLWNvbG9yPSIjZmYwMDUwIiAvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmNDA4MSIgLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHJ4PSI4IiBmaWxsPSJ1cmwoI29yZ2FuMDEpIi8+PHRleHQgeD0iMTYiIHk9IjIyIiBmb250LWZhbWlseT0ic3lzdGVtLXVpIiBmb250LXNpemU9IjE4IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+8J+Tuw==">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 50%, #0f0f0f 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .radio-container {
+            background: rgba(15, 15, 15, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 50px 40px;
+            box-shadow: 
+                0 25px 50px rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1),
+                0 0 0 1px rgba(255, 255, 255, 0.05);
+            text-align: center;
+            max-width: 420px;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Desktop styles */
+        @media (min-width: 768px) {
+            body {
+                padding: 40px;
+            }
+            
+            .radio-container {
+                max-width: 480px;
+                padding: 60px 50px;
+                border-radius: 32px;
+                box-shadow: 
+                    0 35px 70px rgba(0, 0, 0, 0.6),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+                    0 0 0 1px rgba(255, 255, 255, 0.05);
+            }
+
+            .station-logo {
+                width: 110px;
+                height: 110px;
+                border-radius: 24px;
+                font-size: 42px;
+                margin-bottom: 32px;
+            }
+
+            .station-name {
+                font-size: 32px;
+                margin-bottom: 12px;
+            }
+
+            .station-tagline {
+                font-size: 16px;
+                margin-bottom: 8px;
+            }
+
+            .now-playing {
+                padding: 24px;
+                margin: 40px 0;
+                border-radius: 20px;
+            }
+
+            .track-info {
+                font-size: 18px;
+            }
+
+            .controls {
+                gap: 32px;
+                margin: 48px 0;
+            }
+
+            .control-btn {
+                width: 56px;
+                height: 56px;
+                font-size: 20px;
+                border-radius: 16px;
+            }
+
+            .play-button {
+                width: 96px;
+                height: 96px;
+                border-radius: 24px;
+                font-size: 32px;
+            }
+
+            .visualizer {
+                height: 40px;
+                margin: 32px 0;
+                gap: 3px;
+            }
+
+            .vis-bar {
+                width: 4px;
+            }
+
+            .volume-section {
+                margin-top: 40px;
+            }
+
+            .volume-header {
+                margin-bottom: 20px;
+            }
+
+            .volume-label {
+                font-size: 15px;
+            }
+
+            .volume-value {
+                font-size: 15px;
+            }
+
+            .volume-slider {
+                height: 8px;
+            }
+
+            .volume-slider::-webkit-slider-thumb {
+                width: 24px;
+                height: 24px;
+            }
+
+            .volume-slider::-moz-range-thumb {
+                width: 24px;
+                height: 24px;
+            }
+
+            .status-bar {
+                margin-top: 40px;
+                padding: 20px;
+                border-radius: 16px;
+            }
+
+            .status-indicator {
+                font-size: 15px;
+            }
+
+            .status-dot {
+                width: 10px;
+                height: 10px;
+            }
+        }
+
+        /* Large desktop styles */
+        @media (min-width: 1200px) {
+            .radio-container {
+                max-width: 520px;
+                padding: 70px 60px;
+            }
+
+            .station-logo {
+                width: 120px;
+                height: 120px;
+                font-size: 46px;
+            }
+
+            .station-name {
+                font-size: 36px;
+            }
+
+            .play-button {
+                width: 104px;
+                height: 104px;
+                font-size: 36px;
+            }
+
+            .control-btn {
+                width: 60px;
+                height: 60px;
+                font-size: 22px;
+            }
+        }
+
+        .radio-header {
+            margin-bottom: 40px;
+        }
+
+        .station-logo {
+            width: 90px;
+            height: 90px;
+            border-radius: 20px;
+            margin: 0 auto 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .station-logo.playing {
+            animation: logoGlow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes logoGlow {
+            0% { 
+                box-shadow: 
+                    0 12px 24px rgba(255, 0, 80, 0.3),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            }
+            100% { 
+                box-shadow: 
+                    0 12px 24px rgba(255, 0, 80, 0.6),
+                    0 0 30px rgba(255, 0, 80, 0.4),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            }
+        }
+
+        .station-name {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .station-tagline {
+            color: #8a8a8a;
+            font-size: 15px;
+            font-weight: 400;
+            margin-bottom: 0;
+        }
+
+        .now-playing {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 16px;
+            padding: 20px;
+            margin: 32px 0;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .now-playing-label {
+            color: #666;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .track-info {
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        .controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            margin: 40px 0;
+        }
+
+        .control-btn {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            border: none;
+            background: rgba(255, 255, 255, 0.06);
+            color: #ffffff;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .control-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-1px);
+        }
+
+        .control-btn:active {
+            transform: translateY(0);
+        }
+
+        .play-button {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #ff0050 0%, #ff4081 100%);
+            font-size: 28px;
+            box-shadow: 
+                0 12px 24px rgba(255, 0, 80, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            border: none;
+        }
+
+        .play-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 
+                0 16px 32px rgba(255, 0, 80, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+
+        .play-button.loading {
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .volume-section {
+            margin-top: 32px;
+        }
+
+        .volume-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+
+        .volume-label {
+            color: #8a8a8a;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .volume-value {
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .volume-slider {
+            width: 100%;
+            height: 6px;
+            border-radius: 3px;
+            background: rgba(255, 255, 255, 0.1);
+            outline: none;
+            -webkit-appearance: none;
+            appearance: none;
+            cursor: pointer;
+        }
+
+        .volume-slider::-webkit-slider-thumb {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ff0050 0%, #ff4081 100%);
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(255, 0, 80, 0.4);
+            transition: all 0.2s ease;
+        }
+
+        .volume-slider::-webkit-slider-thumb:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(255, 0, 80, 0.6);
+        }
+
+        .volume-slider::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ff0050 0%, #ff4081 100%);
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 4px 12px rgba(255, 0, 80, 0.4);
+        }
+
+        .status-bar {
+            margin-top: 32px;
+            padding: 16px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: #8a8a8a;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #666;
+            transition: all 0.3s ease;
+        }
+
+        .status-indicator.playing .status-dot {
+            background: #00ff88;
+            animation: statusPulse 2s ease-in-out infinite;
+        }
+
+        .status-indicator.loading .status-dot {
+            background: #ffaa00;
+            animation: statusPulse 1s ease-in-out infinite;
+        }
+
+        .status-indicator.error .status-dot {
+            background: #ff4444;
+        }
+
+        @keyframes statusPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        .visualizer {
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            height: 32px;
+            margin: 24px 0;
+            gap: 2px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .visualizer.active {
+            opacity: 1;
+        }
+
+        .vis-bar {
+            width: 3px;
+            background: linear-gradient(to top, #ff0050, #ff4081);
+            border-radius: 2px;
+            height: 4px;
+            transition: height 0.1s ease;
+        }
+
+        /* Mobile optimizations */
+        @media (max-width: 480px) {
+            .radio-container {
+                padding: 40px 24px;
+                margin: 16px;
+                border-radius: 20px;
+            }
+
+            .station-logo {
+                width: 80px;
+                height: 80px;
+                font-size: 32px;
+            }
+
+            .station-name {
+                font-size: 24px;
+            }
+
+            .play-button {
+                width: 72px;
+                height: 72px;
+                font-size: 24px;
+            }
+
+            .control-btn {
+                width: 44px;
+                height: 44px;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .radio-container {
+                padding: 32px 20px;
+            }
+
+            .station-name {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="radio-container">
+        <div class="radio-header">
+            <div class="station-logo" id="stationLogo"> <img width="100%" src="https://imgur.com/cS8j2Ub.jpg"> </div>
+            <h1 class="station-name">89.3 Radio Municipal</h1>
+            <p class="station-tagline">Obispo Trejo</p>
+        </div>
+
+        <div class="now-playing">
+            <div class="now-playing-label">Ahora suena</div>
+            <div class="track-info" id="trackInfo">Conecta para escuchar</div>
+        </div>
+
+        <div class="visualizer" id="visualizer">
+            <div class="vis-bar"></div>
+            <div class="vis-bar"></div>
+            <div class="vis-bar"></div>
+            <div class="vis-bar"></div>
+            <div class="vis-bar"></div>
+            <div class="vis-bar"></div>
+            <div class="vis-bar"></div>
+            <div class="vis-bar"></div>
+            <div class="vis-bar"></div>
+            <div class="vis-bar"></div>
+        </div>
+
+        <div class="controls">
+            <button class="control-btn" id="prevButton">⏮</button>
+            <button class="play-button control-btn" id="playButton">
+                <span id="playIcon">▶</span>
+            </button>
+            <button class="control-btn" id="nextButton">⏭</button>
+        </div>
+
+        <div class="volume-section">
+            <div class="volume-header">
+                <span class="volume-label">Volumen</span>
+                <span class="volume-value" id="volumeValue">70%</span>
+            </div>
+            <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="70">
+        </div>
+
+        <div class="status-bar">
+            <div class="status-indicator" id="statusIndicator">
+                <div class="status-dot"></div>
+                <span id="statusText">Listo para reproducir</span>
+            </div>
+        </div>
+    </div>
+
+    <audio id="audioPlayer" preload="none"></audio>
+
+    <script>
+        const audioPlayer = document.getElementById('audioPlayer');
+        const playButton = document.getElementById('playButton');
+        const playIcon = document.getElementById('playIcon');
+        const volumeSlider = document.getElementById('volumeSlider');
+        const volumeValue = document.getElementById('volumeValue');
+        const statusIndicator = document.getElementById('statusIndicator');
+        const statusText = document.getElementById('statusText');
+        const trackInfo = document.getElementById('trackInfo');
+        const stationLogo = document.getElementById('stationLogo');
+        const visualizer = document.getElementById('visualizer');
+        const visBars = document.querySelectorAll('.vis-bar');
+        
+        const streamUrl = 'http://138.59.247.198:8200/stream';
+        let isPlaying = false;
+        let visualizerInterval;
+
+        // Initialize
+        audioPlayer.volume = volumeSlider.value / 100;
+
+        playButton.addEventListener('click', togglePlay);
+        volumeSlider.addEventListener('input', updateVolume);
+
+        // Fake prev/next buttons (disabled for radio)
+        document.getElementById('prevButton').style.opacity = '0.3';
+        document.getElementById('nextButton').style.opacity = '0.3';
+        document.getElementById('prevButton').style.cursor = 'not-allowed';
+        document.getElementById('nextButton').style.cursor = 'not-allowed';
+
+        function togglePlay() {
+            if (!isPlaying) {
+                startPlaying();
+            } else {
+                stopPlaying();
+            }
+        }
+
+        function startPlaying() {
+            playButton.classList.add('loading');
+            statusIndicator.className = 'status-indicator loading';
+            statusText.textContent = 'Conectando...';
+            trackInfo.textContent = 'Cargando stream...';
+            
+            audioPlayer.src = streamUrl;
+            audioPlayer.load();
+            
+            const playPromise = audioPlayer.play();
+            
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    isPlaying = true;
+                    playButton.classList.remove('loading');
+                    playIcon.textContent = '⏸';
+                    statusIndicator.className = 'status-indicator playing';
+                    statusText.textContent = 'En vivo';
+                    trackInfo.textContent = 'Transmisión en directo';
+                    stationLogo.classList.add('playing');
+                    visualizer.classList.add('active');
+                    startVisualizer();
+                }).catch(error => {
+                    console.error('Error al reproducir:', error);
+                    playButton.classList.remove('loading');
+                    statusIndicator.className = 'status-indicator error';
+                    statusText.textContent = 'Error de conexión';
+                    trackInfo.textContent = 'No se pudo conectar';
+                });
+            }
+        }
+
+        function stopPlaying() {
+            audioPlayer.pause();
+            audioPlayer.currentTime = 0;
+            isPlaying = false;
+            playIcon.textContent = '▶';
+            statusIndicator.className = 'status-indicator';
+            statusText.textContent = 'Detenido';
+            trackInfo.textContent = 'Conecta para escuchar';
+            stationLogo.classList.remove('playing');
+            visualizer.classList.remove('active');
+            stopVisualizer();
+        }
+
+        function updateVolume() {
+            const volume = volumeSlider.value;
+            audioPlayer.volume = volume / 100;
+            volumeValue.textContent = volume + '%';
+        }
+
+        function startVisualizer() {
+            visualizerInterval = setInterval(() => {
+                visBars.forEach((bar, index) => {
+                    const height = Math.random() * 28 + 4;
+                    bar.style.height = height + 'px';
+                });
+            }, 150);
+        }
+
+        function stopVisualizer() {
+            clearInterval(visualizerInterval);
+            visBars.forEach(bar => {
+                bar.style.height = '4px';
+            });
+        }
+
+        // Handle audio events
+        audioPlayer.addEventListener('error', (e) => {
+            statusIndicator.className = 'status-indicator error';
+            statusText.textContent = 'Error de conexión';
+            trackInfo.textContent = 'Verifica tu conexión';
+            stopPlaying();
+        });
+
+        audioPlayer.addEventListener('waiting', () => {
+            statusIndicator.className = 'status-indicator loading';
+            statusText.textContent = 'Buffering...';
+        });
+
+        audioPlayer.addEventListener('canplay', () => {
+            if (isPlaying) {
+                statusIndicator.className = 'status-indicator playing';
+                statusText.textContent = 'En vivo';
+            }
+        });
+
+        // Prevent sleep on mobile
+        let wakeLock = null;
+        async function requestWakeLock() {
+            try {
+                if ('wakeLock' in navigator) {
+                    wakeLock = await navigator.wakeLock.request('screen');
+                }
+            } catch (err) {
+                console.log('Wake lock not supported');
+            }
+        }
+
+        audioPlayer.addEventListener('play', requestWakeLock);
+        audioPlayer.addEventListener('pause', () => {
+            if (wakeLock) {
+                wakeLock.release();
+                wakeLock = null;
+            }
+        });
+
+        // Register Service Worker for PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                const swCode = `
+                    const CACHE_NAME = 'radio-live-v1';
+                    const urlsToCache = [
+                        '/',
+                        '${window.location.href}'
+                    ];
+
+                    self.addEventListener('install', event => {
+                        event.waitUntil(
+                            caches.open(CACHE_NAME)
+                                .then(cache => cache.addAll(urlsToCache))
+                        );
+                    });
+
+                    self.addEventListener('fetch', event => {
+                        event.respondWith(
+                            caches.match(event.request)
+                                .then(response => {
+                                    if (response) {
+                                        return response;
+                                    }
+                                    return fetch(event.request);
+                                })
+                        );
+                    });
+                `;
+
+                const blob = new Blob([swCode], { type: 'application/javascript' });
+                const swUrl = URL.createObjectURL(blob);
+                
+                navigator.serviceWorker.register(swUrl)
+                    .then(registration => {
+                        console.log('Service Worker registrado:', registration);
+                        showInstallPrompt();
+                    })
+                    .catch(error => {
+                        console.log('Error al registrar Service Worker:', error);
+                    });
+            });
+        }
+
+        // PWA Install Prompt
+        let deferredPrompt;
+        
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            showInstallButton();
+        });
+
+        function showInstallButton() {
+            const installButton = document.createElement('button');
+            installButton.innerHTML = '📱 Instalar App';
+            installButton.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: linear-gradient(135deg, #ff0050 0%, #ff4081 100%);
+                color: white;
+                border: none;
+                padding: 12px 20px;
+                border-radius: 25px;
+                font-size: 14px;
+                font-weight: 600;
+                cursor: pointer;
+                box-shadow: 0 8px 20px rgba(255, 0, 80, 0.4);
+                z-index: 1000;
+                transition: all 0.3s ease;
+            `;
+            
+            installButton.addEventListener('click', installApp);
+            installButton.addEventListener('mouseenter', () => {
+                installButton.style.transform = 'translateY(-2px)';
+                installButton.style.boxShadow = '0 12px 25px rgba(255, 0, 80, 0.6)';
+            });
+            installButton.addEventListener('mouseleave', () => {
+                installButton.style.transform = 'translateY(0)';
+                installButton.style.boxShadow = '0 8px 20px rgba(255, 0, 80, 0.4)';
+            });
+            
+            document.body.appendChild(installButton);
+            
+            // Auto-hide after 10 seconds
+            setTimeout(() => {
+                if (installButton && installButton.parentNode) {
+                    installButton.style.opacity = '0';
+                    setTimeout(() => installButton.remove(), 300);
+                }
+            }, 10000);
+        }
+
+        function installApp() {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then((choiceResult) => {
+                    if (choiceResult.outcome === 'accepted') {
+                        console.log('Usuario instaló la PWA');
+                    }
+                    deferredPrompt = null;
+                    document.querySelector('button[data-install]')?.remove();
+                });
+            }
+        }
+
+        function showInstallPrompt() {
+            // Show custom install instructions for different devices
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+            const isAndroid = /Android/.test(navigator.userAgent);
+            
+            if (isIOS) {
+                setTimeout(() => {
+                    const iosPrompt = document.createElement('div');
+                    iosPrompt.innerHTML = `
+                        <div style="
+                            position: fixed;
+                            bottom: 20px;
+                            left: 20px;
+                            right: 20px;
+                            background: rgba(0, 0, 0, 0.9);
+                            color: white;
+                            padding: 20px;
+                            border-radius: 16px;
+                            font-size: 14px;
+                            line-height: 1.5;
+                            z-index: 1000;
+                            backdrop-filter: blur(20px);
+                            border: 1px solid rgba(255, 255, 255, 0.1);
+                        ">
+                            <div style="font-weight: 600; margin-bottom: 8px;">📱 Instalar en iOS</div>
+                            <div>Toca el botón "Compartir" <span style="font-size: 16px;">⬆️</span> y selecciona "Añadir a pantalla de inicio"</div>
+                            <button onclick="this.parentElement.parentElement.remove()" style="
+                                position: absolute;
+                                top: 10px;
+                                right: 15px;
+                                background: none;
+                                border: none;
+                                color: white;
+                                font-size: 18px;
+                                cursor: pointer;
+                            ">×</button>
+                        </div>
+                    `;
+                    document.body.appendChild(iosPrompt);
+                    
+                    setTimeout(() => {
+                        if (iosPrompt && iosPrompt.parentNode) {
+                            iosPrompt.style.opacity = '0';
+                            setTimeout(() => iosPrompt.remove(), 300);
+                        }
+                    }, 8000);
+                }, 2000);
+            }
+        }
+    </script>
+</body>
+</html>
